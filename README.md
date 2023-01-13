@@ -24,14 +24,18 @@ The result will look like this:
 ```yaml
 ---
 name: "📝 Update 7-Zip"
+
 on:
   schedule:
     - cron: "0 2 16 * *"
+
 env:
   ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
+
 jobs:
   update7zip:
     runs-on: "ubuntu-latest"
+
     steps:
       - uses: actions/checkout@v3
       - run: echo "::set-env name=LATEST_7ZIP::$(curl -s https://raw.githubusercontent.com/chxseh/update-7zip-inside-repos/main/latest/latest.txt | head -n 1)"
