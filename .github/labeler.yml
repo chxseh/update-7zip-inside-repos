@@ -1,0 +1,9 @@
+---
+meta:
+  - README.md
+  - LICENSE.md
+  - .gitignore
+  - .gitattributes
+  - .eslintrc.json
+  - .github/**/*
+  - .vscode/**/*

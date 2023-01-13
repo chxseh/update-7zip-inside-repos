@@ -1,0 +1,14 @@
+name: "📝 Update 7-Zip"
+on:
+  schedule:
+    - cron: "0 1 15 * *"
+jobs:
+  update7zip:
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: actions/checkout@v3
+      - run: cd latest && bash latest.sh
+      - uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
+          message: "📝 Update 7-Zip"
